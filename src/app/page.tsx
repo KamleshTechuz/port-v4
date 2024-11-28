@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Proj from "@/components/Proj";
 import Skill from "@/components/Skill";
+import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 
 const PortfolioWebsite = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -35,67 +36,76 @@ const PortfolioWebsite = () => {
   };
 
   return (
-    <div className="dark bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-[100vh] transition-colors duration-300 relative overflow-x-hidden">
-      {/* Header Section */}
-      <Header scrollToSection={() => {}} />
+    <ParallaxProvider>
 
-      <div className="container mx-auto px-6 py-16 space-y-24 mt-[120px]">
-        {/* Hero Section */}
-        <AnimatedSection>
-          <Hero />
-        </AnimatedSection>
+        <div className="dark bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-[100vh] transition-colors duration-300 relative overflow-hidden">
+          {/* Header Section */}
+          <Header scrollToSection={() => {}} />
 
-        {/* Experience Section */}
-        <AnimatedSection>
-          <Exp />
-        </AnimatedSection>
+          <div className=" mx-auto px-6 py-16 space-y-24 mt-[120px]">
+            {/* Hero Section */}
+            <AnimatedSection>
+              <Hero />
+            </AnimatedSection>
 
-        {/* Education Section */}
-        <AnimatedSection>
-          <Edu />
-        </AnimatedSection>
+            {/* Experience Section */}
+            {/* <AnimatedSection>
+              <Exp />
+            </AnimatedSection> */}
 
-        {/* Projects Section */}
-        <AnimatedSection>
-          <Proj />
-        </AnimatedSection>
+            {/* Education Section */}
+            {/* <AnimatedSection>
+              <Edu />
+            </AnimatedSection> */}
 
-        {/* Skills Section */}
-        <AnimatedSection direction="down">
-          <Skill />
-        </AnimatedSection>
-      </div>
+            {/* Projects Section */}
+            <AnimatedSection>
+              <Proj />
+            </AnimatedSection>
 
-      {/* Footer Section */}
-      <AnimatedSection>
-        <Footer />
-      </AnimatedSection>
+            {/* Skills Section */}
+            {/* <Parallax speed={-10}>
+              <Skill />
+            </Parallax> */}
+            {/* <AnimatedSection direction="down">
+            </AnimatedSection> */}
+          </div>
 
-      {/* Scroll to Top Button */}
-      {showScrollTop && (
-        <button
-          onClick={scrollToTop}
-          className="fixed bottom-6 right-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50"
-          aria-label="Scroll to Top"
-        >
-          <ArrowUp size={24} />
-        </button>
-      )}
+          {/* Footer Section */}
+          <AnimatedSection>
+            <Footer />
+          </AnimatedSection>
 
-      {/* Message Button */}
-      <button
-        onClick={handleChatToggle}
-        className="fixed bottom-6 left-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50"
-        aria-label="Message"
-      >
-        <MessageCircle size={24} />
-      </button>
+          {/* Scroll to Top Button */}
+          {showScrollTop && (
+            <button
+              onClick={scrollToTop}
+              className="fixed bottom-6 right-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50"
+              aria-label="Scroll to Top"
+            >
+              <ArrowUp size={24} />
+            </button>
+          )}
 
-      {/* Chat Form (Floating) */}
-      {showChat && (
-        <Cont setShowChat={setShowChat} handleChatToggle={handleChatToggle} />
-      )}
-    </div>
+          {/* Message Button */}
+          <button
+            onClick={handleChatToggle}
+            className="fixed bottom-6 left-6 bg-gradient-to-r from-purple-500 to-pink-500 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 z-50"
+            aria-label="Message"
+          >
+            <MessageCircle size={24} />
+          </button>
+
+          {/* Chat Form (Floating) */}
+          {showChat && (
+            <Cont
+              setShowChat={setShowChat}
+              handleChatToggle={handleChatToggle}
+            />
+          )}
+        </div>
+
+    </ParallaxProvider>
   );
 };
 

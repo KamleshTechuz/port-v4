@@ -19,7 +19,7 @@ export default {
   ],
   projects: [
     {
-      title: "Tutorac | eLearning Platform",
+      title: "Tutorac",
       description:
         "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
       technologies: ["Angualr", "Node.js | NestJs", "MySQL", "MongoDb"],
