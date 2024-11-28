@@ -15,7 +15,6 @@ const Proj = () => {
       </h2>
       
       <div className="relative w-full overflow-hidden">
-        <Parallax translateX={[-20, 20]} className="flex space-x-8">
           {projects.map((project, i) => (
             <div 
               key={i} 
@@ -57,7 +56,6 @@ const Proj = () => {
               </div>
             </div>
           ))}
-        </Parallax>
       </div>
     </div>
   );

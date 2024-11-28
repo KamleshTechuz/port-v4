@@ -1,198 +1,47 @@
-import { ChevronDown, ChevronUp, Code, Github, Link } from "lucide-react";
-import React, { useState } from "react";
+import { motion, useTransform, useScroll } from "framer-motion";
+import { Link } from "lucide-react";
+import { useRef } from "react";
+import profileData from "../data";
 
-const projects = [
-  {
-    title: "Tutorac | eLearning Platform",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "Angualr",
-      "Node.js | NestJs",
-      "MySQL",
-      "MongoDb",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-  {
-    title: "Getlitt | Learning Platform",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "Angualr",
-      "Node.js | NestJs",
-      "PostgreSQL",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-  {
-    title: "PartsPractice",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "React",
-      "Node.js | NestJs",
-      "MySQL",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-  {
-    title: "DivorceX",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "React",
-      "Node.js | NestJs",
-      "MySQL",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-  {
-    title: "Insyd",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "React",
-      "Node.js | NestJs",
-      "MySQL",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-  {
-    title: "Bitmail-Wizard",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "React",
-      "Node.js | NestJs",
-      "MySQL",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-  {
-    title: "TintBurst",
-    description:
-      "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
-    technologies: [
-      "React",
-      "Node.js | NestJs",
-      "MySQL",
-    ],
-    githubLink: "#",
-    impact: [
-      "Reduced operational costs by 35%",
-      "Improved process efficiency by 50%",
-      "Implemented advanced data security protocols",
-    ],
-  },
-];
+const { projects } = profileData;
 
-const Proj2 = () => {
-
-    const [selectedProject, setSelectedProject] = useState(projects[0]);
-
-
-    return (
-        <div className="space-y-8">
-          <h2 className="text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center gap-4">
-            <Code /> Highlighted Projects
-          </h2>
-          <div className="flex md:flex-row flex-col bg-gray-900 rounded-xl shadow-lg overflow-hidden">
-            {/* Left Side: Project List */}
-            <div className="bg-gray-800 md:w-1/3 flex-shrink-0">
-              <h3 className="text-lg font-bold text-purple-400 p-4 border-b border-gray-700">
-                Select a Project
-              </h3>
-              <div className="relative">
-                <div className="absolute h-full w-2 bg-purple-500 left-0 top-0"></div>
-                {projects.map((project, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setSelectedProject(project)}
-                    className={`w-full text-left px-6 py-4 border-b border-gray-700 pl-8 transition-colors relative ${
-                      selectedProject === project
-                        ? "bg-purple-600 text-white shadow-inner"
-                        : "bg-gray-800 hover:bg-gray-700 text-gray-300"
-                    }`}
-                  >
-                    {project.title}
-                    {selectedProject === project && (
-                      <span className="absolute left-2 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-purple-500 rounded-full"></span>
-                    )}
-                  </button>
-                ))}
-              </div>
-            </div>
-    
-            {/* Right Side: Project Details */}
-            <div className="bg-gray-800 md:w-2/3 p-6 space-y-4 flex flex-col justify-center relative">
-              <div className="absolute top-0 left-0 w-2 bg-purple-500 h-full"></div>
-              <h3 className="text-3xl font-semibold text-purple-400 border-b border-gray-700 pb-2">
-                {selectedProject.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {selectedProject.description}
-              </p>
-              <div>
-                <h4 className="text-lg font-semibold text-purple-300 mb-2">
-                  Project Impact
-                </h4>
-                <ul className="list-disc list-inside text-gray-300 space-y-2">
-                  {selectedProject.impact.map((impact, index) => (
-                    <li key={index}>{impact}</li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {selectedProject.technologies.map((tech, index) => (
-                  <span
-                    key={index}
-                    className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm shadow-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <a
-                href={selectedProject.githubLink}
-                className="flex items-center text-purple-400 hover:text-purple-300 transition-colors mt-4"
-              >
-                <Link className="mr-2" /> Check out
-              </a>
-            </div>
-          </div>
+const Card = ({ project }: any) => {
+  return (
+    <div className="flex-shrink-0 w-full max-w-lg rounded-xl">
+      <div className="bg-gray-800 p-6 space-y-4 flex flex-col justify-center relative">
+        <h3 className="text-3xl font-semibold text-purple-400 border-b border-gray-700 pb-2">
+          {project?.title}
+        </h3>
+        <p className="text-gray-300 leading-relaxed">{project?.description}</p>
+        <div>
+          <h4 className="text-lg font-semibold text-purple-300 mb-2">
+            Project Impact
+          </h4>
+          <ul className="list-disc list-inside text-gray-300 space-y-2">
+            {project?.impact.map((impact: any, index: number) => (
+              <li key={index}>{impact}</li>
+            ))}
+          </ul>
         </div>
-      );
+        <div className="flex flex-wrap gap-2">
+          {project?.technologies.map((tech: any, index: number) => (
+            <span
+              key={index}
+              className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm shadow-sm"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+        <a
+          href={project?.githubLink}
+          className="flex items-center text-purple-400 hover:text-purple-300 transition-colors mt-4"
+        >
+          <Link className="mr-2" /> Check out
+        </a>
+      </div>
+    </div>
+  );
 };
 
-export default Proj2;
+export default Card;
