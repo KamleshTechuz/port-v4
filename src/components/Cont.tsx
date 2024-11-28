@@ -62,7 +62,7 @@ const Cont = ({ setShowChat, handleChatToggle }: any) => {
           value={formData.name}
           onChange={handleFormChange}
           placeholder="Your Name"
-          className="w-full p-4 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full px-4 py-2 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
         <input
           autoComplete="off"
@@ -71,7 +71,7 @@ const Cont = ({ setShowChat, handleChatToggle }: any) => {
           value={formData.email}
           onChange={handleFormChange}
           placeholder="Your Email"
-          className="w-full p-4 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full px-4 py-2 bg-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
         />
         <textarea
           autoComplete="off"
@@ -79,7 +79,7 @@ const Cont = ({ setShowChat, handleChatToggle }: any) => {
           value={formData.message}
           onChange={handleFormChange}
           placeholder="Your Message"
-          className="w-full p-4 bg-gray-700 rounded-lg h-24 focus:outline-none focus:ring-2 focus:ring-purple-500"
+          className="w-full p-4 bg-gray-700 rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-purple-500"
         ></textarea>
         <button
           type="submit"
