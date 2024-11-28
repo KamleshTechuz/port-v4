@@ -1,20 +1,19 @@
-import { Briefcase, Code, Home, Send, User, Menu, X, Book } from "lucide-react";
+import { Briefcase, Code, Home, Send, User, Menu, X, Book, Linkedin, Github, Mail } from "lucide-react";
 import { useState } from "react";
 
-const Header = ({ scrollToSection }: any) => {
+const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navItems = [
-    { name: "Experience", icon: <Briefcase size={20} /> },
-    { name: "Education", icon: <Book size={20} /> },
-    { name: "Projects", icon: <Code size={20} /> },
-    { name: "Skills", icon: <User size={20} /> },
+    { name: "LinkedIn", icon: <Linkedin size={20} />, url: "https://linkedin.com" },
+    { name: "GitHub", icon: <Github size={20} />, url: "https://github.com" },
+    { name: "Email", icon: <Mail size={20} />, url: "mailto:example@example.com" },
   ];
 
   return (
     <header className="fixed top-0 left-0 w-full bg-gray-900/80 backdrop-blur-md z-40 shadow-md transition-all duration-300">
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-500">
+        <div className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
           Kamlesh
         </div>
 
@@ -23,8 +22,8 @@ const Header = ({ scrollToSection }: any) => {
           {navItems.map((item, index) => (
             <button
               key={index}
-              onClick={() => scrollToSection(item.name.toLowerCase())}
-              className="flex items-center text-gray-300 hover:text-purple-400 transition-all gap-2"
+              onClick={() => window.open(item.url, "_blank")}
+              className="flex items-center text-gray-300 hover:text-green-400 transition-all gap-2"
             >
               {item.icon}
               {item.name}
@@ -32,8 +31,8 @@ const Header = ({ scrollToSection }: any) => {
           ))}
           {/* Contact Button */}
           <button
-            onClick={() => scrollToSection("contact")}
-            className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-transform"
+            onClick={() => {}}
+            className="px-4 py-2 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-transform"
           >
             Contact
           </button>
@@ -68,10 +67,10 @@ const Header = ({ scrollToSection }: any) => {
             <button
               key={index}
               onClick={() => {
-                scrollToSection(item.name.toLowerCase());
+                window.open(item.url, "_blank");
                 setMenuOpen(false);
               }}
-              className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-purple-400 transition-all text-lg"
+              className="flex items-center gap-2 px-4 py-2 text-gray-300 hover:text-green-400 transition-all text-lg"
             >
               {item.icon}
               {item.name}
@@ -79,11 +78,8 @@ const Header = ({ scrollToSection }: any) => {
           ))}
           {/* Contact Button */}
           <button
-            onClick={() => {
-              scrollToSection("contact");
-              setMenuOpen(false);
-            }}
-            className="px-4 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-transform"
+            onClick={() => {}}
+            className="px-4 py-2 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-transform"
           >
             Contact
           </button>
