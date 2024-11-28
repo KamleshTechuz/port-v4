@@ -6,7 +6,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Proj from "@/components/Proj2";
+import Proj from "@/components/Proj";
 import { motion, useScroll, useTransform } from "framer-motion";
 import profileData from "../data";
 

@@ -29,9 +29,14 @@ export default {
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
       ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
+      ],
     },
     {
-      title: "Getlitt | Learning Platform",
+      title: "Getlitt",
       description:
         "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
       technologies: ["Angualr", "Node.js | NestJs", "PostgreSQL"],
@@ -40,6 +45,11 @@ export default {
         "Reduced operational costs by 35%",
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
+      ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
       ],
     },
     {
@@ -53,6 +63,11 @@ export default {
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
       ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
+      ],
     },
     {
       title: "DivorceX",
@@ -64,6 +79,11 @@ export default {
         "Reduced operational costs by 35%",
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
+      ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
       ],
     },
     {
@@ -77,6 +97,11 @@ export default {
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
       ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
+      ],
     },
     {
       title: "Bitmail-Wizard",
@@ -89,6 +114,11 @@ export default {
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
       ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
+      ],
     },
     {
       title: "TintBurst",
@@ -100,6 +130,11 @@ export default {
         "Reduced operational costs by 35%",
         "Improved process efficiency by 50%",
         "Implemented advanced data security protocols",
+      ],
+      images: [
+        images.tutorac.tutorac1,
+        images.tutorac.tutorac2,
+        images.tutorac.tutorac3,
       ],
     },
   ],
