@@ -34,7 +34,7 @@ const Footer = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {/* Social Links Column */}
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-purple-400">
+              <h4 className="text-xl font-semibold mb-4 text-[#00ad42]">
                 Connect
               </h4>
               <div className="flex space-x-4">
@@ -52,7 +52,7 @@ const Footer = () => {
   
             {/* Quick Links Column */}
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-purple-400">
+              <h4 className="text-xl font-semibold mb-4 text-[#00ad42]">
                 Quick Links
               </h4>
               <div className="space-y-2">
@@ -71,7 +71,7 @@ const Footer = () => {
   
             {/* Contact Information Column */}
             <div>
-              <h4 className="text-xl font-semibold mb-4 text-purple-400">
+              <h4 className="text-xl font-semibold mb-4 text-[#00ad42]">
                 Contact
               </h4>
               <p className="text-gray-300 mb-2">Ahmedabad, Gujarat, India</p>

@@ -21,7 +21,7 @@ const PortfolioWebsite = () => {
     });
   
     // Adjust the transform range to match your desired scroll behavior
-    const x = useTransform(scrollYProgress, [0, 1], ["0%", "-300%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${(projects.length- 0.5) * 100}%`]);
 
   return (
     <div className="dark bg-black text-white min-h-[100vh] transition-colors duration-300">
@@ -36,14 +36,14 @@ const PortfolioWebsite = () => {
 
         <div 
           ref={containerRef} 
-          className="relative h-[300vh] w-full"
+          className="relative h-[700vh] w-full"
         >
           <div className="sticky top-0 left-0 h-screen w-full overflow-hidden">
             <motion.div 
               style={{ x }} 
               className="flex h-full items-center gap-8 will-change-transform"
             >
-              {[...projects, ...projects, ...projects, ...projects].map(
+              {projects.map(
                 (project, i) => (
                   <Proj project={project} key={i} />
                 )
