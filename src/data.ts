@@ -1,5 +1,7 @@
 import { images } from "./app/assets";
 
+const { tutorac, getlitt, oxford } = images;
+
 export default {
   experiences: [
     {
@@ -21,7 +23,7 @@ export default {
     {
       title: "Tutorac",
       description:
-        "Developed a comprehensive ERP solution integrating finance, human resources, supply chain, and customer relationship management modules. Implemented microservices architecture with real-time analytics and machine learning-powered predictive insights.",
+        "Tutorac is an online learning platform providing video courses and live entrance exam practice tests for classes 11 and 12. It offers cinematic video courses aided by 3D visuals to help students learn better. We designed and developed the entire platform from the ground up. Key features of the platform include rendering 4k video lessons, integrated quizzes and resources, live exam prep tests, and a student-teacher doubt clarification module.",
       technologies: ["Angualr", "Node.js | NestJs", "MySQL", "MongoDb"],
       githubLink: "#",
       impact: [
@@ -30,9 +32,9 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        tutorac.tutorac1,
+        tutorac.tutorac2,
+        tutorac.tutorac3,
       ],
     },
     {
@@ -47,9 +49,8 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        getlitt.getlitt1,
+        getlitt.getlitt2,
       ],
     },
     {
@@ -64,9 +65,8 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        oxford.oxford1,
+        oxford.oxford2,
       ],
     },
     {
@@ -81,9 +81,9 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        tutorac.tutorac1,
+        tutorac.tutorac2,
+        tutorac.tutorac3,
       ],
     },
     {
@@ -98,9 +98,9 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        tutorac.tutorac1,
+        tutorac.tutorac2,
+        tutorac.tutorac3,
       ],
     },
     {
@@ -115,9 +115,9 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        tutorac.tutorac1,
+        tutorac.tutorac2,
+        tutorac.tutorac3,
       ],
     },
     {
@@ -132,9 +132,9 @@ export default {
         "Implemented advanced data security protocols",
       ],
       images: [
-        images.tutorac.tutorac1,
-        images.tutorac.tutorac2,
-        images.tutorac.tutorac3,
+        tutorac.tutorac1,
+        tutorac.tutorac2,
+        tutorac.tutorac3,
       ],
     },
   ],

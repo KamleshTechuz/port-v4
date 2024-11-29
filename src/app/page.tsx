@@ -28,7 +28,7 @@ const PortfolioWebsite = () => {
       {/* Header Section */}
       <Header />
 
-      <div className="mx-auto px-6 py-16 space-y-24 pt-[380px]">
+      <div className="container mx-auto px-6 py-16 space-y-24">
         {/* Hero Section */}
         <AnimatedSection>
           <Hero />

@@ -1,11 +1,23 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import React from "react";
 
 const Hero = () => {
+  const handleScroll = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <div className="text-center space-y-6">
-      <h1 className="text-5xl font-bold">
-        Hi, I'm <code className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">Kamlesh Mundel</code>, <br />Full Stack Developer
+    <div className="flex flex-col justify-center items-center text-center space-y-6 h-[100vh]">
+      <h1 className="text-5xl font-bold mt-[-100px]">
+        Hi, I'm{" "}
+        <code className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+          Kamlesh Mundel
+        </code>
+        , <br />
+        Full Stack Developer
       </h1>
       <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
         Innovative software engineer with a passion for building scalable,
@@ -13,25 +25,14 @@ const Hero = () => {
         web applications that solve complex business challenges through
         cutting-edge technology.
       </p>
-      <div className="flex justify-center space-x-6 pt-4">
-        <a
-          href="#"
-          className="text-white hover:text-green-400 transition-colors"
+      <div className="flex justify-center pt-4">
+        <button
+          onClick={handleScroll}
+          className="relative w-14 h-24 pt-4 flex items-center justify-center rounded-full border-2 border-green-500 bg-transparent text-green-500 hover:text-green-700 hover:border-green-700 transition-all transform hover:scale-110 group"
         >
-          <Github size={32} />
-        </a>
-        <a
-          href="#"
-          className="text-white hover:text-green-400 transition-colors"
-        >
-          <Linkedin size={32} />
-        </a>
-        <a
-          href="#"
-          className="text-white hover:text-green-400 transition-colors"
-        >
-          <Mail size={32} />
-        </a>
+          <ArrowDown size={28} className="animate-bounce" />
+          <span className="absolute inset-0 rounded-full border-2 border-green-500 opacity-0 group-hover:opacity-100 animate-pulse transition-opacity"></span>
+        </button>
       </div>
     </div>
   );
