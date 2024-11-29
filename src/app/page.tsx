@@ -24,7 +24,7 @@ const PortfolioWebsite = () => {
     const x = useTransform(scrollYProgress, [0, 1], ["0%", "-300%"]);
 
   return (
-    <div className="dark bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white min-h-[100vh] transition-colors duration-300">
+    <div className="dark bg-black text-white min-h-[100vh] transition-colors duration-300">
       {/* Header Section */}
       <Header />
 

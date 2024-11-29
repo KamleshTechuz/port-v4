@@ -13,7 +13,7 @@ const Hero = () => {
     <div className="flex flex-col justify-center items-center text-center space-y-6 h-[100vh]">
       <h1 className="text-5xl font-bold mt-[-100px]">
         Hi, I'm{" "}
-        <code className="text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+        <code className="text-transparent bg-clip-text bg-[#00ad42]">
           Kamlesh Mundel
         </code>
         , <br />

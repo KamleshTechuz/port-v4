@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <header className="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-gray-900/80 backdrop-blur-md z-40 shadow-md transition-all duration-300 rounded-full px-6 py-4 flex justify-between items-center space-x-4 w-fit">
       {/* Logo */}
-      <div className="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-green-700">
+      <div className="text-xl font-bold text-transparent bg-clip-text bg-[#00ad42]">
         Kamlesh
       </div>
 
@@ -30,7 +30,7 @@ const Header = () => {
         {/* Contact Button */}
         <button
           onClick={() => {}}
-          className="flex gap-2 px-4 py-2 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-transform"
+          className="flex gap-2 px-4 py-2 bg-[#00ad42] text-white rounded-lg shadow-md hover:shadow-lg hover:scale-105 transform transition-transform"
         >
           Resume <Download />
         </button>
